@@ -378,6 +378,11 @@ body {
     background-color: #1877F2;
     box-shadow: 0 10px 20px rgba(24, 119, 242, 0.3);
 }
+/* Estilo para el nuevo botón de TikTok */
+.btn-tiktok {
+    background-color: #000000;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
 
 .btn-social:hover {
     transform: translateY(-5px) scale(1.03);
