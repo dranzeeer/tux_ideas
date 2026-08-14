@@ -1,0 +1,341 @@
+/* Variables de color y diseño para fácil modificación */
+:root {
+    --primary: #FF416C;
+    --secondary: #FF4B2B;
+    --dark-bg: #1a1a2e;
+    --light-bg: #f4f7f6;
+    --text-dark: #2d3436;
+    --text-light: #ffffff;
+    --gradient-brand: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    --card-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* -------------------------------------
+   HERO SECTION
+-------------------------------------- */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    background: url('https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 26, 46, 0.75); /* Oscurece el fondo para resaltar texto */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+    max-width: 800px;
+    color: var(--text-light);
+    animation: fadeIn 1.2s ease-out;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 16px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-light);
+    text-decoration: none;
+    background: var(--gradient-brand);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(255, 65, 108, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(255, 65, 108, 0.6);
+}
+
+/* -------------------------------------
+   SECCIÓN PRODUCTOS (GRID & TARJETAS)
+-------------------------------------- */
+.productos-section {
+    padding: 100px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.productos-section h2 {
+    font-size: 2.8rem;
+    color: var(--dark-bg);
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+}
+
+.productos-section h2::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 4px;
+    background: var(--gradient-brand);
+    bottom: -10px;
+    left: 20%;
+    border-radius: 2px;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Efecto de fondo al pasar el cursor sobre la tarjeta */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: var(--gradient-brand);
+    transition: all 0.4s ease;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+}
+
+.card:hover::before {
+    height: 100%;
+}
+
+.card:hover h3, 
+.card:hover p, 
+.card:hover .icon-container i {
+    color: var(--text-light);
+}
+
+.icon-container {
+    width: 80px;
+    height: 80px;
+    background: var(--light-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    transition: all 0.4s ease;
+}
+
+.icon-container i {
+    font-size: 2rem;
+    color: var(--primary);
+    transition: color 0.4s ease;
+}
+
+.card:hover .icon-container {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    transition: color 0.4s ease;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #636e72;
+    transition: color 0.4s ease;
+}
+
+/* -------------------------------------
+   SECCIÓN REDES Y CONTACTO
+-------------------------------------- */
+.contacto-section {
+    background-color: #fff;
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.contacto-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contacto-section p {
+    font-size: 1.1rem;
+    color: #636e72;
+    margin-bottom: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    min-width: 220px;
+}
+
+.btn-social i {
+    font-size: 1.4rem;
+}
+
+/* Colores específicos de redes sociales */
+.btn-whatsapp {
+    background-color: #25D366;
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+}
+.btn-instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    box-shadow: 0 10px 20px rgba(220, 39, 67, 0.3);
+}
+.btn-facebook {
+    background-color: #1877F2;
+    box-shadow: 0 10px 20px rgba(24, 119, 242, 0.3);
+}
+
+.btn-social:hover {
+    transform: translateY(-5px) scale(1.03);
+    filter: brightness(1.1);
+}
+
+/* -------------------------------------
+   FOOTER
+-------------------------------------- */
+footer {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.frase-motivacional {
+    font-size: 1.8rem;
+    font-weight: 300;
+    font-style: italic;
+    color: #ff9a9e; /* Tono pastel suave */
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.footer-divider {
+    height: 1px;
+    width: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 0 auto 30px auto;
+}
+
+footer p:last-child {
+    font-size: 0.9rem;
+    color: #b2bec3;
+    letter-spacing: 1px;
+}
+
+/* -------------------------------------
+   ANIMACIONES Y RESPONSIVE
+-------------------------------------- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    .productos-section h2 {
+        font-size: 2.2rem;
+    }
+    .btn-social {
+        width: 100%;
+        max-width: 350px;
+    }
+    .frase-motivacional {
+        font-size: 1.4rem;
+    }
+}
