@@ -3,7 +3,7 @@
     --primary: #D7BDE2; /* Morado pastel claro */
     --secondary: #C39BD3; /* Morado pastel un poco más intenso para dar profundidad */
     --dark-bg: #1a1a2e;
-    --light-bg: #f4f7f6;
+    --light-bg: #fdedec;
     --text-dark: #2d3436;
     --text-light: ##2C3E50;
     --gradient-brand: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
@@ -35,7 +35,7 @@ body {
     position: relative;
     height: 100vh;
     min-height: 600px;
-    background: url('fondoprincipal.jpg') center/cover no-repeat;
+    background: url('fondoprincipal2.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -321,7 +321,7 @@ body {
    SECCIÓN REDES Y CONTACTO
 -------------------------------------- */
 .contacto-section {
-    background-color: #fff;
+    background-color: #ebf5fb;
     padding: 80px 5%;
     text-align: center;
 }
