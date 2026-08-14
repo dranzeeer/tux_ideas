@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tux_Ideas | Productos Personalizados</title>
-    <!-- Fuente moderna de Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <!-- Iconos de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Hoja de estilos -->
@@ -31,32 +27,41 @@
             <h2>Nuestro Catálogo</h2>
             <div class="grid-productos">
                 
-                <div class="card">
-                    <div class="icon-container"><i class="fa-solid fa-mug-hot"></i></div>
+                <!-- Tarjeta de Tazas -->
+                <a href="#modal-tazas" class="card link-card">
+                    <!--<div class="icon-container"><i class="fa-solid fa-mug-hot"></i></div>-->
                     <h3>Tazas</h3>
                     <p>Comienza tus mañanas con inspiración. Diseños para toda ocasión.</p>
-                </div>
+                    <span class="ver-mas">Ver diseños <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
 
-                <div class="card">
-                    <div class="icon-container"><i class="fa-solid fa-key"></i></div>
+                <!-- Tarjeta de Llaveros -->
+                <a href="#modal-llaveros" class="card link-card">
+                    <!--<div class="icon-container"><i class="fa-solid fa-key"></i></div>-->
                     <h3>Llaveros</h3>
                     <p>Un toque personal que te acompaña a todas partes.</p>
-                </div>
+                    <span class="ver-mas">Ver diseños <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
 
-                <div class="card">
-                    <div class="icon-container"><i class="fa-solid fa-bottle-water"></i></div>
-                    <h3>Botes con Popote</h3>
+                <!-- Tarjeta de Vasos tipo venti -->
+                <a href="#modal-vasos" class="card link-card">
+                    <!--<div class="icon-container"><i class="fa-solid fa-bottle-water"></i></div>-->
+                    <h3>Vasos Venti 710m L</h3>
                     <p>Hidratación con estilo. Perfectos para llevar tu bebida favorita.</p>
-                </div>
+                    <span class="ver-mas">Ver diseños <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
 
-                <div class="card">
-                    <div class="icon-container"><i class="fa-solid fa-baby-carriage"></i></div>
-                    <h3>Botes de Chupón</h3>
+                <!-- Tarjeta de Cilindros (Actualizada) -->
+                <a href="#modal-cilindros" class="card link-card">
+                   <!-- <div class="icon-container"><i class="fa-solid fa-baby-carriage"></i></div>-->
+                    <h3>Cilindros</h3>
                     <p>Disponibles en distintos tamaños, ideales para los más pequeños.</p>
-                </div>
+                    <span class="ver-mas">Ver diseños <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
 
+                <!-- Tarjeta de Rompecabezas -->
                 <div class="card">
-                    <div class="icon-container"><i class="fa-solid fa-puzzle-piece"></i></div>
+                    <!--<div class="icon-container"><i class="fa-solid fa-puzzle-piece"></i></div>-->
                     <h3>Rompecabezas</h3>
                     <p>Muchísimos diseños. Arma tus recuerdos pieza por pieza.</p>
                 </div>
@@ -86,6 +91,81 @@
                 </a>
             </div>
         </section>
+
+        <!-- ==========================================
+             VENTANA EMERGENTE (MODAL) PARA TAZAS
+        =========================================== -->
+        <div id="modal-tazas" class="modal-galeria">
+            <div class="modal-contenido">
+                <a href="#catalogo" class="cerrar-modal"><i class="fa-solid fa-xmark"></i></a>
+                <h2>¡Una probadita de nuestros cientos de diseños!</h2>
+                <p>Aquí te dejamos 3 de nuestras creaciones estrella para que te inspires. Tenemos muchísimas más temáticas. <strong>¡Pídenos el catálogo completo por WhatsApp y descubre la taza perfecta para ti!</strong></p>
+                <div class="grid-imagenes">
+                    <img src="taza1.jpg" alt="Diseño de Taza 1">
+                    <img src="taza2.jpg" alt="Diseño de Taza 2">
+                    <img src="taza3.jpg" alt="Diseño de Taza 3">
+                </div>
+                <a href="https://wa.me/34610832953" target="_blank" class="btn-primary mt-20">Cotizar mi Taza por WhatsApp</a>
+            </div>
+        </div>
+
+        <!-- ==========================================
+             VENTANA EMERGENTE (MODAL) PARA LLAVEROS
+        =========================================== -->
+        <div id="modal-llaveros" class="modal-galeria">
+            <div class="modal-contenido">
+                <a href="#catalogo" class="cerrar-modal"><i class="fa-solid fa-xmark"></i></a>
+                <h2>¡Una probadita de nuestros cientos de diseños!</h2>
+                <p>Aquí te dejamos 3 de nuestras creaciones estrella para que te inspires. Tenemos muchísimas más temáticas. <strong>¡Pídenos el catálogo completo por WhatsApp y descubre el llavero perfecto para ti!</strong></p>
+                <div class="grid-imagenes">
+                    <img src="llavero-muestra-1.jpg" alt="Diseño de Llavero 1">
+                    <img src="llavero-muestra-2.jpg" alt="Diseño de Llavero 2">
+                    <img src="llavero-muestra-3.jpg" alt="Diseño de Llavero 3">
+                </div>
+                <a href="https://wa.me/34610832953" target="_blank" class="btn-primary mt-20">Cotizar mi Llavero por WhatsApp</a>
+            </div>
+        </div>    
+
+        <!-- ==========================================
+             VENTANA EMERGENTE (MODAL) PARA VASOS TIPO VENTI
+        =========================================== -->
+        <div id="modal-vasos" class="modal-galeria">
+            <div class="modal-contenido">
+                <a href="#catalogo" class="cerrar-modal"><i class="fa-solid fa-xmark"></i></a>
+                <h2>¡Una probadita de nuestros cientos de diseños!</h2>
+                <p>Aquí te dejamos 3 de nuestras creaciones estrella para que te inspires. Tenemos muchísimas más temáticas. <strong>¡Pídenos el catálogo completo por WhatsApp y descubre el vaso perfecto para ti!</strong></p>
+                <div class="grid-imagenes">
+                    <img src="bote1.jpg" alt="Diseño de Vaso Venti 1">
+                    <img src="bote2.jpg" alt="Diseño de Vaso Venti 2">
+                    <img src="bote3.jpg" alt="Diseño de Vaso Venti 3">
+                </div>
+                <a href="https://wa.me/34610832953" target="_blank" class="btn-primary mt-20">Cotizar mi Vaso por WhatsApp</a>
+            </div>
+        </div>  
+
+        <!-- ==========================================
+             VENTANA EMERGENTE (MODAL) PARA CILINDROS
+        =========================================== -->
+        <div id="modal-cilindros" class="modal-galeria">
+            <div class="modal-contenido">
+                <!-- Botón para cerrar -->
+                <a href="#catalogo" class="cerrar-modal"><i class="fa-solid fa-xmark"></i></a>
+                
+                <h2>¡Una probadita de nuestros cientos de diseños!</h2>
+                
+                <p>Aquí te dejamos 3 de nuestras creaciones estrella para que te inspires. Tenemos muchísimas más temáticas. <strong>¡Pídenos el catálogo completo por WhatsApp y descubre el cilindro perfecto para ti!</strong></p>
+                
+                <div class="grid-imagenes">
+                    <!-- Aquí están los nombres de tus 3 imágenes de cilindros -->
+                    <img src="cilindro1.jpg" alt="Diseño de Cilindro 1">
+                    <img src="cilindro2.jpg" alt="Diseño de Cilindro 2">
+                    <img src="cilindro3.jpg" alt="Diseño de Cilindro 3">
+                </div>
+                
+                <a href="https://wa.me/34610832953" target="_blank" class="btn-primary mt-20">Cotizar mi Cilindro por WhatsApp</a>
+            </div>
+        </div>  
+
     </main>
 
     <!-- Pie de página -->
@@ -93,7 +173,7 @@
         <div class="footer-content">
             <p class="frase-motivacional">"Crear es la forma más pura de dejar una huella. No vendas solo objetos, entrega emociones y recuerdos inolvidables."</p>
             <div class="footer-divider"></div>
-            <p>&copy; 2026 Tux Ideas. Todos los derechos reservados.</p>
+            <p>&copy; 2026 Tux_Ideas. Todos los derechos reservados.</p>
         </div>
     </footer>
 
